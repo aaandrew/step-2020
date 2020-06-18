@@ -53,6 +53,7 @@ function updateResultsOnPage(timeRanges) {
  * Sends the meeting request to the server and get back the time ranges.
  */
 function queryServer(meetingRequest) {
+  console.log("Meeting request %s", meetingRequest);
   const json = JSON.stringify(meetingRequest);
   return fetch('/query', {method: 'POST', body: json})
       .then((response) => {
